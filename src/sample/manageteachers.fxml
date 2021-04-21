@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="320.0" prefWidth="470.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ManageTeachersMenuController">
+    <bottom>
+        <HBox alignment="BOTTOM_CENTER" prefHeight="30.0" prefWidth="470.0" spacing="50.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="create" mnemonicParsing="false" onAction="#goCreate" prefHeight="25.0" prefWidth="60.0" text="Create">
+               <HBox.margin>
+                  <Insets top="40.0" />
+               </HBox.margin></Button>
+                <Button fx:id="edit" mnemonicParsing="false" onAction="#goEdit" prefHeight="25.0" prefWidth="100.0" text="Edit/Delete">
+               <HBox.margin>
+                  <Insets top="40.0" />
+               </HBox.margin></Button>
+                <Button fx:id="back" mnemonicParsing="false" onAction="#goBack" prefHeight="25.0" prefWidth="60.0" text="Back">
+               <HBox.margin>
+                  <Insets top="40.0" />
+               </HBox.margin></Button>
+            </children>
+            <padding>
+                <Insets bottom="20.0" />
+            </padding>
+        </HBox>
+    </bottom>
+    <center>
+        <VBox alignment="TOP_CENTER" prefHeight="178.0" prefWidth="320.0" spacing="20.0" BorderPane.alignment="CENTER">
+            <children>
+                <HBox alignment="CENTER_LEFT" prefHeight="25.0" prefWidth="600.0" spacing="30.0">
+                    <children>
+                        <Label prefHeight="18.0" prefWidth="91.0" text="Name:" />
+                  <TextField fx:id="name" prefHeight="25.0" prefWidth="203.0" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" prefHeight="25.0" prefWidth="200.0" spacing="30.0">
+                    <children>
+                        <Label prefHeight="26.0" prefWidth="90.0" text="Pick sick dates: " />
+                        <DatePicker fx:id="sickStart" prefHeight="25.0" prefWidth="203.0" />
+                    </children>
+                </HBox>
+            <HBox prefHeight="25.0" prefWidth="200.0">
+               <children>
+                  <DatePicker fx:id="sickEnd" prefHeight="25.0" prefWidth="203.0">
+                     <HBox.margin>
+                        <Insets left="120.0" />
+                     </HBox.margin>
+                  </DatePicker>
+               </children>
+            </HBox>
+                <HBox alignment="CENTER_LEFT" prefHeight="25.0" prefWidth="200.0" spacing="30.0">
+               <children>
+                  <Label prefHeight="18.0" prefWidth="90.0" text="Email:" />
+                  <TextField fx:id="email" prefHeight="25.0" prefWidth="203.0">
+                     <HBox.margin>
+                        <Insets left="2.0" />
+                     </HBox.margin></TextField>
+               </children>
+                </HBox>
+            </children>
+         <BorderPane.margin>
+            <Insets top="10.0" />
+         </BorderPane.margin>
+        </VBox>
+    </center>
+    <left>
+        <Pane prefHeight="284.0" prefWidth="75.0" BorderPane.alignment="CENTER" />
+    </left>
+    <top>
+        <Pane prefHeight="51.0" prefWidth="470.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label layoutX="134.0" layoutY="7.0" text="Manage Teachers">
+                    <font>
+                        <Font size="26.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+    </top>
+    <right>
+        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="75.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="message" prefHeight="126.0" prefWidth="63.0" textFill="RED" />
+         </children></VBox>
+    </right>
+</BorderPane>

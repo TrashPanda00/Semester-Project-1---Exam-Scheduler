@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="329.0" prefWidth="713.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.EditTeachersController">
+    <bottom>
+        <HBox alignment="BOTTOM_CENTER" prefHeight="75.0" prefWidth="714.0" spacing="50.0" BorderPane.alignment="CENTER">
+            <children>
+            <Label fx:id="message" prefHeight="50.0" prefWidth="311.0" textFill="RED" />
+                <Button fx:id="edit" mnemonicParsing="false" onAction="#goEdit" prefHeight="25.0" prefWidth="60.0" text="Edit" />
+            <Button fx:id="delete" mnemonicParsing="false" onAction="#goDelete" prefHeight="25.0" prefWidth="60.0" text="Delete" />
+                <Button fx:id="back" mnemonicParsing="false" onAction="#goBack" prefHeight="25.0" prefWidth="60.0" text="Back" />
+            </children>
+            <padding>
+                <Insets bottom="20.0" />
+            </padding>
+        </HBox>
+    </bottom>
+    <center>
+        <HBox prefHeight="117.0" prefWidth="728.0" spacing="40.0">
+        <VBox alignment="TOP_CENTER" prefHeight="146.0" prefWidth="320.0" spacing="20.0" BorderPane.alignment="CENTER">
+            <children>
+                <HBox alignment="CENTER_LEFT" prefHeight="25.0" prefWidth="600.0" spacing="30.0">
+                    <children>
+                        <Label prefHeight="18.0" prefWidth="75.0" text="Name:" />
+                        <TextField fx:id="name" prefHeight="25.0" prefWidth="203.0" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" prefHeight="25.0" prefWidth="200.0" spacing="30.0">
+                    <children>
+                        <Label prefHeight="18.0" prefWidth="75.0" text="Pick date: " />
+                        <DatePicker fx:id="startDate" prefHeight="25.0" prefWidth="203.0" />
+                    </children>
+                </HBox>
+               <DatePicker fx:id="endDate" prefHeight="25.0" prefWidth="203.0">
+                  <VBox.margin>
+                     <Insets left="96.0" />
+                  </VBox.margin>
+               </DatePicker>
+                <HBox alignment="CENTER_LEFT" prefHeight="25.0" prefWidth="200.0" spacing="30.0">
+                    <children>
+                        <Label prefWidth="75.0" text="Email:" />
+                        <TextField fx:id="email" prefHeight="25.0" prefWidth="203.0" />
+                    </children>
+                </HBox>
+            </children>
+            <HBox.margin>
+               <Insets left="25.0" />
+            </HBox.margin>
+        </VBox>
+         <VBox alignment="TOP_CENTER" prefHeight="146.0" prefWidth="320.0" spacing="20.0">
+            <children>
+               <HBox alignment="CENTER_LEFT" prefHeight="25.0" prefWidth="600.0" spacing="30.0">
+                  <children>
+                     <Label prefHeight="18.0" prefWidth="75.0" text="Name:" />
+                     <TextField fx:id="oldName" disable="true" prefHeight="25.0" prefWidth="203.0" />
+                  </children>
+               </HBox>
+               <HBox alignment="CENTER_LEFT" prefHeight="25.0" prefWidth="200.0" spacing="30.0">
+                  <children>
+                     <Label prefHeight="18.0" prefWidth="75.0" text="Pick date: " />
+                     <TextField fx:id="oldStartDate" disable="true" prefHeight="25.0" prefWidth="203.0" />
+                  </children>
+               </HBox>
+               <HBox alignment="CENTER_LEFT" prefHeight="25.0" prefWidth="200.0" spacing="30.0">
+                  <children>
+                     <TextField fx:id="oldEndDate" disable="true" prefHeight="25.0" prefWidth="203.0">
+                        <HBox.margin>
+                           <Insets left="106.0" />
+                        </HBox.margin>
+                     </TextField>
+                  </children>
+               </HBox>
+               <HBox alignment="CENTER_LEFT" prefHeight="25.0" prefWidth="200.0" spacing="30.0">
+                  <children>
+                     <Label prefWidth="75.0" text="Email:" />
+                     <TextField fx:id="oldEmail" disable="true" prefHeight="25.0" prefWidth="203.0" />
+                  </children>
+               </HBox>
+            </children>
+         </VBox>
+        </HBox>
+    </center>
+    <left>
+        <Pane prefHeight="148.0" prefWidth="0.0" BorderPane.alignment="CENTER" />
+    </left>
+    <top>
+        <Pane prefHeight="94.0" prefWidth="714.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label layoutX="286.0" layoutY="14.0" text="Edit Teacher" textAlignment="CENTER">
+                    <font>
+                        <Font size="26.0" />
+                    </font>
+                </Label>
+            <Label layoutX="25.0" layoutY="52.0" text="New:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="384.0" layoutY="57.0" text="Old:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            </children>
+        </Pane>
+    </top>
+    <right>
+        <VBox alignment="CENTER" prefHeight="148.0" prefWidth="0.0" BorderPane.alignment="CENTER" />
+    </right>
+</BorderPane>
